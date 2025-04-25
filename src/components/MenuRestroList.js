@@ -10,12 +10,12 @@ const MenuRestroList=()=>{
 
     const FetchMenu= async ()=>{
 
-    const data= await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=25.59430&lng=85.13520&restaurantId="+resId+"&catalog_qa=undefined&query=Biryani&submitAction=ENTER")
+    const data= await fetch("https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=12.960059122809971&lng=77.57337538383284&restaurantId="+resId+"&catalog_qa=undefined&query=Biryani&submitAction=ENTER")
     const json= await data.json();
    
     console.log(json);
     return (SetMenuList(json.data.cards.filter((ele,ind)=> (ind===2 || ind===4?ele:false))))
-}
+      }
     
     if(MenuList.length===0)
     {
