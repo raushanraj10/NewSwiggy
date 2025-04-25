@@ -8,11 +8,11 @@ const NavBar=()=>{
        <img id="image" src={NAV_URL}></img>
       </div>
       <div id="icons">
-        <Link id="ab" className="a" to='#'>Home</Link>
-        <Link className="a" to='#'>MyOrder</Link>
-        <Link className="a" to='#'>Cart</Link>
-        <Link className="a" to='#'>Contact</Link>
-        <Link className="a" to='#'>About</Link>
+        <Link id="ab" className="a" to='/'>Home</Link>
+        <Link className="a" to='/myorder'>MyOrder</Link>
+        <Link className="a" to='cart'>Cart</Link>
+        <Link className="a" to='/contact'>Contact</Link>
+        <Link className="a" to='/about'>About</Link>
       </div>
     </div>
     )

@@ -6,12 +6,14 @@
     /* border:0.5px solid #303030; */
     display: flex;
     justify-content: space-between;
+    margin: 30px;
 }
 #image{
     width: 50%;
     height: 110%;
     margin: 5px;
     border-radius: 50%;
+    overflow: hidden;
 }
 #icons{
     display: flex;
@@ -35,10 +37,12 @@
 }
 #card{
     width: 250px;
+    height: 550px;
     border-radius: 10%;
-    border: 3px solid black;
+    /* border: 3px solid black; */
     /* margin: 60px; */
-    margin-top: 90px ;
+    margin-top: 100px ;
+    border: 3px solid black
     /* margin-left: 150px ; */
     /* display: flex;
     flex-wrap: wrap; */
@@ -47,6 +51,8 @@
 #card:hover{
     border: 5px solid rgb(72, 52, 52);
     border-radius: 10%;
+    width: 250px;
+    height: 550px;
 }
 #raterstyle{
     display: flex;
@@ -62,7 +68,7 @@
     margin-top: 80px ;
     padding:10px;
     padding-left:15px;
-    background-color: #6b6969;
+    background-color: #e4e3e3;
     /* display: flex;
     flex-wrap: wrap;
     justify-content: space-between; */
@@ -74,21 +80,24 @@
   height: 160px;
  /* border: 2px solid black; */
 border-radius: 10%;
-background-color: #e4e3e3;
+
+background-color: #c2bebe;
 }
 .s{
     /* border: 2px solid black; */
     width: 190px;
     height: 40px;
     margin-top: 40px;
-    background-color: #e4e3e3;
+    background-color: #c2bebe;
     border-radius: 10%;
 
 }
 #cardS{
+    margin-top: 50px;
     display: flex;
     flex-wrap: wrap;
-    gap:0.5px;
+    gap:60px;
+    
     /* justify-content:space-between; */
 }
 #cardimage{
@@ -105,10 +114,28 @@ border-radius: 10%;
 #cardsdesign{
     display: flex;
     flex-wrap: wrap;
-    justify-content:space-between;
+   gap: 80px;
+    margin: 30px;
+    
 }
 #rupay{
     margin-bottom:30px ;
+}
+#linkRes{
+    text-decoration: none;
+    color: #000000;
+}
+.to{
+    padding: 50px;
+    height: 600px;
+    border: 1px solid black;
+  margin: 100px;
+   justify-items: center;
+   align-items: center;
+   background-image: linear-gradient(to bottom,rgb(215, 179, 248),rgb(224, 196, 250),white);
+}
+.risk{
+    font-size: large;
 }
 
 

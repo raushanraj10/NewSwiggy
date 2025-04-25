@@ -3,12 +3,18 @@ import ReactDOM from "react-dom/client"
 import Header from "/src/components/Header"
 import Body from "/src/components/Body"
 import { createBrowserRouter,RouterProvider } from "react-router";
+import Cart from "./src/components/Cart";
+import Contact from "./src/components/Contact";
+import About from "./src/components/About";
+import MyOrder from "./src/components/MyOrder";
+import { Outlet } from "react-router";
+import MenuRestroList from "./src/components/MenuRestrolist";
 
 const App=()=>{
     return (
         <div id ="parent">
           <Header/>
-           <Body/>
+           <Outlet/>
           {/* <Footer/> */}
         </div>
     )
@@ -17,7 +23,33 @@ const App=()=>{
 const Route = createBrowserRouter([
     {
         path:"/",
-        element:<App/>
+        element:<App/>,
+        children:[
+            {
+                path:"/",
+                element:<Body/>
+            },
+            {
+                path:"/about",
+                element:<About/>
+            },
+            {
+                path:"/myorder",
+                element:<MyOrder/>
+            },
+            {
+                path:"/cart",
+                element:<Cart/>
+            }, 
+            {
+                path:"/restaurant/:resId",
+                element:<MenuRestroList/>
+            }, 
+            {
+                path:"/contact",
+                element:<Contact/>
+            },  
+        ],  
     }
 ])
 

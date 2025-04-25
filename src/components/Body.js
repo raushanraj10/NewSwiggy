@@ -3,10 +3,10 @@ import { Cardapi } from "../Utiles/constant";
 import { CardapiType } from "../Utiles/constant";
 import Shimmer from "./Shimmer";
 import RestaurantCardList from "./RestaurantCardList";
+import { Link } from "react-router";
 
 const RestroCard=()=>{
     const [listcard,setlistcard]=useState([]);
-    console.log("there")
     useEffect(()=>{fetchData()},[]);
 
     const fetchData= async ()=>{
@@ -17,10 +17,12 @@ const RestroCard=()=>{
     }
     if(listcard.length===0)
         return <Shimmer/>
-        console.log(listcard)
+        console.log("/restaurant/"+ listcard[5].card.card.info.id)
     return(
       <div id="cardsdesign">
-    {listcard.map(ele=><RestaurantCardList key={ele.card.card.info.id} resdata={ele}/>)}
+    {
+    listcard.map((elem)=><Link key={elem.card.card.info.id} to={"/restaurant/"+ elem.card.card.info.id}><RestaurantCardList  resdata={elem}/></Link>)
+    }
     </div>
     )
 }
