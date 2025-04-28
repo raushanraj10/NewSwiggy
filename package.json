@@ -2,8 +2,7 @@
   "name": "real-first-clone",
   "version": "1.0.0",
   "scripts": {
-    "start":"parcel index.html"
-   
+    "start": "parcel index.html"
   },
   "keywords": [],
   "author": "",

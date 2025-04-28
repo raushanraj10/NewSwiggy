@@ -38,11 +38,12 @@
 #card{
     width: 250px;
     height: 550px;
-    border-radius: 10%;
+    
+    
     /* border: 3px solid black; */
     /* margin: 60px; */
     margin-top: 100px ;
-    border: 3px solid black
+    /* border: 3px solid black */
     /* margin-left: 150px ; */
     /* display: flex;
     flex-wrap: wrap; */
@@ -110,6 +111,7 @@ border-radius: 10%;
 }
 .h{
     margin: 5px;
+    text-decoration: none;
 }
 #cardsdesign{
     display: flex;
@@ -136,6 +138,32 @@ border-radius: 10%;
 }
 .risk{
     font-size: large;
+}
+#bottontab{
+    background-color: rgb(99, 10, 34);
+    color: rgb(248, 248, 248);
+    width: 70px;
+    height: 35px;
+}
+#non{
+    text-decoration: non;
+}
+#searchBar{
+    display: flex;
+    gap:10px;
+    margin: 20px;
+    margin-top: 70px;
+    /* border: 1px solid #000000; */
+    justify-content: center;
+
+
+}
+#top{
+    width: 75px;
+
+    background-color: rgb(105, 215, 136);
+    border-radius: 10%;
+    color: #1009d1;
 }
 
 

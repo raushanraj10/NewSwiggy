@@ -4,25 +4,31 @@ import { CardapiType } from "../Utiles/constant";
 import Shimmer from "./Shimmer";
 import RestaurantCardList from "./RestaurantCardList";
 import { Link } from "react-router";
-
-const RestroCard=()=>{
+import SearchBar from "./SearchBar.";
+ const RestroCard=()=>{
     const [listcard,setlistcard]=useState([]);
+ const [filteredRes,setfilteredRes]=useState([]);
     useEffect(()=>{fetchData()},[]);
 
     const fetchData= async ()=>{
       const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.59430&lng=85.13520&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
       const json = await data.json();
-      return (setlistcard(json.data.cards.filter((ele,ind)=>ind>2)))
+     setlistcard(json.data.cards.filter((ele,ind)=>ind>2))
+     setfilteredRes(json.data.cards.filter((ele,ind)=>ind>2))
       
     }
     if(listcard.length===0)
         return <Shimmer/>
         console.log("/restaurant/"+ listcard[5].card.card.info.id)
     return(
+      <div>
+        <SearchBar></SearchBar>
       <div id="cardsdesign">
+      
     {
-    listcard.map((elem)=><Link key={elem.card.card.info.id} to={"/restaurant/"+ elem.card.card.info.id}><RestaurantCardList  resdata={elem}/></Link>)
+    filteredRes.map((elem)=><Link key={elem.card.card.info.id} to={"/restaurant/"+ elem.card.card.info.id}><RestaurantCardList  resdata={elem}/></Link>)
     }
+    </div>
     </div>
     )
 }

@@ -8,13 +8,18 @@ import Contact from "./src/components/Contact";
 import About from "./src/components/About";
 import MyOrder from "./src/components/MyOrder";
 import { Outlet } from "react-router";
-import MenuRestroList from "./src/components/MenuRestrolist";
+import MenuRestroList from "./src/components/MenuRestroList";
+import SearchBar from "./src/components/SearchBar.";
+
+
 
 const App=()=>{
     return (
         <div id ="parent">
           <Header/>
+         
            <Outlet/>
+           
           {/* <Footer/> */}
         </div>
     )
