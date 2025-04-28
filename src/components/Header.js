@@ -16,6 +16,7 @@ const NavBar=()=>{
         <Link id="ab" className="a" to='/'>Home</Link>
         <Link className="a" to='/myorder'>MyOrder</Link>
         <Link className="a" to='cart'>Cart</Link>
+        <Link className="a" to='/grocery'>Grocery</Link>
         <Link className="a" to='/contact'>Contact</Link>
         <Link className="a" to='/about'>About</Link>
         <button id="bottontab" onClick={()=>{buttontab==="Login"?setbutton("Logout"):setbutton("Login")}}>{buttontab}</button>
