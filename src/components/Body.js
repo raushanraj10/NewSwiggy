@@ -5,10 +5,14 @@ import Shimmer from "./Shimmer";
 import RestaurantCardList from "./RestaurantCardList";
 import { Link } from "react-router";
 import SearchBar from "./SearchBar.";
+import useOnlineStatus from "../Utiles/useOnlineStatus";
  const RestroCard=()=>{
+
+  const status=useOnlineStatus();
     const [listcard,setlistcard]=useState([]);
  const [filteredRes,setfilteredRes]=useState([]);
     useEffect(()=>{fetchData()},[]);
+
 
     const fetchData= async ()=>{
       const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=25.59430&lng=85.13520&collection=83639&tags=layout_CCS_Biryani&sortBy=&filters=&type=rcv2&offset=0&page_type=null")
@@ -17,9 +21,14 @@ import SearchBar from "./SearchBar.";
      setfilteredRes(json.data.cards.filter((ele,ind)=>ind>2))
       
     }
+
     if(listcard.length===0)
         return <Shimmer/>
         console.log("/restaurant/"+ listcard[5].card.card.info.id)
+
+    if(!status)
+      return (<h1>no internet connection </h1>)
+
     return(
       <div>
         <SearchBar></SearchBar>

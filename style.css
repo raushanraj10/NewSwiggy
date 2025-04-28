@@ -165,5 +165,8 @@ border-radius: 10%;
     border-radius: 10%;
     color: #1009d1;
 }
+#statuscheck{
+    margin-top: -10px;
+}
 
 
