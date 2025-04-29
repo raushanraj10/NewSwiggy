@@ -8,13 +8,15 @@ const SearchBar=(props)=>{
         <div id="searchBar">
             <input type ="text" value={searchres} onChange={(ele)=>setres(ele.target.value)} ></input>
             <button onClick={()=>{
-               
 
                 setfilteredRes(listcard.filter((elem)=>elem.card.card.info.name.toLowerCase().includes(searchres.toLowerCase())))
-                
-
+            
             }}>Search</button>
-            <button id="top">Top Reated</button>
+            <button id="top" onClick={()=>{
+                setfilteredRes(listcard.filter((ele)=>ele.card.card.info.avgRating>4))
+            }}
+                
+           >Top Reated</button>
         </div>
     )
 
