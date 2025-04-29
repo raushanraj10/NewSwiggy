@@ -6,7 +6,7 @@ const SearchBar=(props)=>{
     const [searchres,setres]=useState([]);
     return(
         <div id="searchBar">
-            <input type ="text" value={searchres} onChange={(ele)=>setres(ele.target.value)} ></input>
+            <input id="in" type ="text" value={searchres} onChange={(ele)=>setres(ele.target.value)} ></input>
             <button onClick={()=>{
 
                 setfilteredRes(listcard.filter((elem)=>elem.card.card.info.name.toLowerCase().includes(searchres.toLowerCase())))
