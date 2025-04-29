@@ -24,10 +24,19 @@ import useOnlineStatus from "../Utiles/useOnlineStatus";
 
     if(listcard.length===0)
         return <Shimmer/>
-        console.log("/restaurant/"+ listcard[5].card.card.info.id)
 
     if(!status)
-      return (<h1>no internet connection </h1>)
+      return (<h1 id ="noconnection">No internet Connection 😑</h1>)
+    if(filteredRes.length===0)
+      return (<div id="such">
+        <h1>No such Data  Available 🤫</h1>
+       <button id="arrow" onClick={()=>{
+        setfilteredRes(listcard)
+       }}>🔄Back</button>
+       {/* <span id="span">Back</span> */}
+        </div>
+
+      )
 
     return(
       <div>
@@ -35,7 +44,7 @@ import useOnlineStatus from "../Utiles/useOnlineStatus";
       <div id="cardsdesign">
       
     {
-    filteredRes.map((elem)=><Link key={elem.card.card.info.id} to={"/restaurant/"+ elem.card.card.info.id}><RestaurantCardList  resdata={elem}/></Link>)
+    filteredRes.map((elem)=><Link className="list" key={elem.card.card.info.id} to={"/restaurant/"+ elem.card.card.info.id}><RestaurantCardList  resdata={elem}/></Link>)
     }
     </div>
     </div>

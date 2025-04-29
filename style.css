@@ -1,6 +1,6 @@
 *{
   /* background-image: linear-gradient(to bottom, rgb(20, 12, 53),rgb(216, 168, 10)); */
-  background-color: rgb(215, 179, 248);
+  background-color: rgb(255, 255, 255);
 } 
 #Nav{
     /* border:0.5px solid #303030; */
@@ -9,17 +9,20 @@
     margin: 30px;
 }
 #image{
-    width: 50%;
-    height: 110%;
-    margin: 5px;
+    width: 350px;
+    height: 250px;
+    margin-left: -105px;
+    margin-top: -40px;
     border-radius: 50%;
+    /* border: 1px solid black; */
     overflow: hidden;
+    padding: 0;
 }
 #icons{
     display: flex;
     gap: 2.5vw;
     padding: 50px;
-    padding-top:25px;
+    padding-top:35px;
     opacity: 0.7;
     
 }
@@ -44,21 +47,21 @@
     /* margin: 60px; */
     margin-top: 100px ;
     /* border: 3px solid black */
-    /* margin-left: 150px ; */
+    margin-left: 140px ;
     /* display: flex;
     flex-wrap: wrap; */
     /* padding:10px; */
 }
-#card:hover{
+/* #card:hover{
     border: 5px solid rgb(72, 52, 52);
     border-radius: 10%;
     width: 250px;
-    height: 550px;
-}
+    height: 400px;
+} */
 #raterstyle{
     display: flex;
     justify-content: space-between;
-    padding: 20px;
+    /* padding: 5px; */
 }
 #parentShimmer{
     width: 200px;
@@ -130,11 +133,11 @@ border-radius: 10%;
 .to{
     padding: 50px;
     height: 600px;
-    border: 1px solid black;
+    /* border: 1px solid black; */
   margin: 100px;
    justify-items: center;
    align-items: center;
-   background-image: linear-gradient(to bottom,rgb(215, 179, 248),rgb(224, 196, 250),white);
+   /* background-image: linear-gradient(to bottom,rgb(215, 179, 248),rgb(224, 196, 250),white); */
 }
 .risk{
     font-size: large;
@@ -146,7 +149,8 @@ border-radius: 10%;
     height: 35px;
 }
 #non{
-    text-decoration: non;
+    /* text-decoration: non; */
+    margin-top: 10px;
 }
 #searchBar{
     display: flex;
@@ -168,5 +172,25 @@ border-radius: 10%;
 #statuscheck{
     margin-top: -10px;
 }
-
+#such{
+   margin-left:40vw ;
+}
+#arrow{
+    font-size: 30px;
+    border: none;
+    margin-top: 10px;
+    margin-left: 120px;
+   
+}
+/* #span{
+    font-size: x-large;
+    margin-top: -100px;
+} */
+#noconnection{
+    margin-left: 45vw;
+}
+.list{
+    text-decoration:none ;
+    color: #000000;
+}
 

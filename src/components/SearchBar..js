@@ -10,7 +10,7 @@ const SearchBar=(props)=>{
             <button onClick={()=>{
 
                 setfilteredRes(listcard.filter((elem)=>elem.card.card.info.name.toLowerCase().includes(searchres.toLowerCase())))
-            
+               
             }}>Search</button>
             <button id="top" onClick={()=>{
                 setfilteredRes(listcard.filter((ele)=>ele.card.card.info.avgRating>4))
