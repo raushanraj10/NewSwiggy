@@ -31,7 +31,7 @@ import useOnlineStatus from "../Utiles/useOnlineStatus";
 
     return(
       <div>
-        <SearchBar></SearchBar>
+      <SearchBar listcard={listcard} filteredRes={filteredRes} setfilteredRes={setfilteredRes}></SearchBar>
       <div id="cardsdesign">
       
     {
